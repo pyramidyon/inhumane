@@ -1,0 +1,15 @@
+---
+import translations from "@utils/t.ts";
+import Layout from "@layouts/Layout.astro";
+import Container from "@src/components/Container.astro";
+import AboutUs from "@src/components/AboutUs.astro"
+
+const t = translations(Astro.url);
+---
+
+<Layout title="About Me" description="Lorem ipsum dolor sit amet">
+	<AboutUs />
+	<Container class="pt-16">
+		<p set:html={t.about_description} />
+	</Container>
+</Layout>
